@@ -13,7 +13,7 @@
       setTimeout(function () {
         preloader.classList.add('hidden');
         document.body.style.overflow = '';
-      }, 1800);
+      }, 600);
     });
     document.body.style.overflow = 'hidden';
   }
@@ -108,6 +108,20 @@
   /* ─── Current year in footer ─── */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
+  });
+
+  /* ─── Lazy-load videos (defer heavy mp4 until near viewport) ─── */
+  document.querySelectorAll('video[preload="none"]').forEach(function (video) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          video.preload = 'metadata';
+          video.load();
+          observer.unobserve(video);
+        }
+      });
+    }, { rootMargin: '200px' });
+    observer.observe(video);
   });
 
 })();

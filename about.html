@@ -14,14 +14,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { display: ['Cormorant Garamond','Georgia','serif'], body: ['DM Sans','Helvetica Neue','sans-serif'] } } }
-    }
-  </script>
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="./css/tokens.css" as="style">
+  <link rel="preload" href="./css/base.css" as="style">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/tokens.css">
   <link rel="stylesheet" href="./css/base.css">
@@ -174,7 +173,7 @@
 
     <!-- ─── MANIFESTO ─── -->
     <section class="manifesto" data-nav-theme="dark">
-      <video class="manifesto__video" autoplay muted loop playsinline preload="none">
+      <video class="manifesto__video" autoplay muted loop playsinline preload="none" poster="./assets/hero-alternate.png">
         <source src="./assets/training-atmosphere.mp4" type="video/mp4">
       </video>
       <div class="manifesto__content container" data-animate="stagger">
