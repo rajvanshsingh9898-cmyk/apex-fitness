@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — The APEX Journal</title>
+  <meta name="description" content="Insights on training, nutrition, mindset, and the coaching process from APEX Fitness Coaching.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog — The APEX Journal">
+  <meta property="og:description" content="Deep dives on training, nutrition, mindset, and the coaching journey.">
+  <meta property="og:image" content="./assets/hero-primary.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','Georgia','serif'],body:['DM Sans','Helvetica Neue','sans-serif']}}}}</script>
+
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/blog.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announce bar -->
+  <div class="announce-bar" role="marquee" aria-label="Announcements">
+    <div class="announce-bar__track">
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" aria-label="APEX Home"><span class="navbar__logo"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L3 26h6l5-12 5 12h6L14 2z"/></svg></span><span class="navbar__wordmark">APEX</span></a>
+      <ul class="navbar__links"><li><a href="about.html" class="navbar__link">About</a></li><li><a href="programs.html" class="navbar__link">Programs</a></li><li><a href="results.html" class="navbar__link">Results</a></li><li><a href="pricing.html" class="navbar__link">Pricing</a></li><li><a href="blog.html" class="navbar__link">Blog</a></li></ul>
+      <a href="contact.html" class="navbar__cta">Book a Call</a>
+      <button class="navbar__hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="about.html" class="mobile-nav__link">About</a><a href="programs.html" class="mobile-nav__link">Programs</a><a href="results.html" class="mobile-nav__link">Results</a><a href="pricing.html" class="mobile-nav__link">Pricing</a><a href="blog.html" class="mobile-nav__link">Blog</a><a href="contact.html" class="mobile-nav__link">Contact</a>
+    <div class="mobile-nav__bottom"><a href="contact.html" class="mobile-nav__cta">Book a Call</a></div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Blog Hero -->
+    <section class="blog-hero" data-nav-theme="light">
+      <div class="container" data-animate="fade-up">
+        <p class="eyebrow" style="color:var(--grey-mid);">THE APEX JOURNAL</p>
+        <h1 style="font-family:var(--font-display);font-weight:300;font-size:var(--text-2xl);color:var(--black);margin-top:var(--space-4);">Insights for the<br><em>serious lifter.</em></h1>
+      </div>
+    </section>
+
+    <!-- Filter tabs -->
+    <section class="blog-filters" data-nav-theme="light">
+      <div class="container">
+        <div class="filter-tabs">
+          <button class="filter-tab filter-tab--active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="training">Training</button>
+          <button class="filter-tab" data-filter="nutrition">Nutrition</button>
+          <button class="filter-tab" data-filter="mindset">Mindset</button>
+          <button class="filter-tab" data-filter="coaching">Coaching</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured post -->
+    <section class="blog-featured" data-nav-theme="light">
+      <div class="container">
+        <div class="featured-post" data-animate="fade-up" data-category="training">
+          <div class="featured-post__image-wrap">
+            <img src="./assets/program-card-bg.png" alt="Athlete training in darkness" width="800" height="500" loading="lazy" decoding="async" class="featured-post__image">
+          </div>
+          <div class="featured-post__body">
+            <div class="featured-post__meta">
+              <span class="featured-post__tag">TRAINING</span>
+              <span class="featured-post__date">December 15, 2024</span>
+            </div>
+            <h2 class="featured-post__title">The Case Against Program Hopping: Why Consistency Beats Optimization</h2>
+            <p class="featured-post__excerpt">Most lifters change programs every 4-6 weeks. The best lifters stick to intelligent programming for months. Here's why patience is your greatest competitive advantage — and how to know when it's actually time to change.</p>
+            <a href="#" class="featured-post__link">Read Article &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog grid -->
+    <section class="blog-grid-section" data-nav-theme="light">
+      <div class="container">
+        <div class="blog-grid" data-animate="stagger">
+
+          <article class="blog-card blog-card--tall" data-category="nutrition">
+            <div class="blog-card__image-wrap">
+              <img src="./assets/blog-featured.png" alt="Nutrition journal on black surface" width="400" height="500" loading="lazy" decoding="async" class="blog-card__image">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__tag">NUTRITION</span><span class="blog-card__date">Dec 8, 2024</span></div>
+              <h3 class="blog-card__title">Macro Tracking Without Obsession: A Balanced Approach to Flexible Dieting</h3>
+              <p class="blog-card__excerpt">How to track macros effectively without developing an unhealthy relationship with food. The 80/20 framework that works for busy professionals.</p>
+              <a href="#" class="blog-card__link">Read &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="mindset">
+            <div class="blog-card__image-wrap">
+              <img src="./assets/testimonial-bg.png" alt="Empty gym in early morning" width="400" height="300" loading="lazy" decoding="async" class="blog-card__image">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__tag">MINDSET</span><span class="blog-card__date">Nov 28, 2024</span></div>
+              <h3 class="blog-card__title">The 5am Myth: Why Training Time Doesn't Matter (But Consistency Does)</h3>
+              <a href="#" class="blog-card__link">Read &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="training">
+            <div class="blog-card__image-wrap">
+              <img src="./assets/training-method.png" alt="Dumbbell with chalk dust" width="400" height="300" loading="lazy" decoding="async" class="blog-card__image">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__tag">TRAINING</span><span class="blog-card__date">Nov 15, 2024</span></div>
+              <h3 class="blog-card__title">Progressive Overload: The Only Principle That Actually Matters</h3>
+              <a href="#" class="blog-card__link">Read &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--tall" data-category="coaching">
+            <div class="blog-card__image-wrap">
+              <img src="./assets/footer-cta.png" alt="Running track at sunset" width="400" height="500" loading="lazy" decoding="async" class="blog-card__image">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__tag">COACHING</span><span class="blog-card__date">Nov 5, 2024</span></div>
+              <h3 class="blog-card__title">What to Expect in Your First Month of Online Coaching</h3>
+              <p class="blog-card__excerpt">A realistic timeline of what happens when you start working with a coach — from the initial assessment to your first program adjustment.</p>
+              <a href="#" class="blog-card__link">Read &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="nutrition">
+            <div class="blog-card__image-wrap">
+              <img src="./assets/hero-primary.png" alt="Grip on pull-up bar" width="400" height="300" loading="lazy" decoding="async" class="blog-card__image">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__tag">NUTRITION</span><span class="blog-card__date">Oct 22, 2024</span></div>
+              <h3 class="blog-card__title">Supplements Worth Your Money (And Those That Aren't)</h3>
+              <a href="#" class="blog-card__link">Read &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="training">
+            <div class="blog-card__image-wrap">
+              <img src="./assets/transformation-results.png" alt="Training transformation" width="400" height="300" loading="lazy" decoding="async" class="blog-card__image">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__tag">TRAINING</span><span class="blog-card__date">Oct 10, 2024</span></div>
+              <h3 class="blog-card__title">Deload Weeks: The Counterintuitive Secret to Long-Term Strength Gains</h3>
+              <a href="#" class="blog-card__link">Read &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="blog-newsletter" data-nav-theme="dark">
+      <div class="container container--default">
+        <div class="newsletter-block" data-animate="fade-up">
+          <p class="eyebrow" style="color:var(--accent);">NEWSLETTER</p>
+          <h2 style="font-family:var(--font-display);font-weight:300;font-size:var(--text-xl);color:var(--white-off);margin-top:var(--space-3);">Get smarter about training.<br><em>Every week.</em></h2>
+          <p style="font-family:var(--font-body);color:var(--grey-mid);max-width:480px;margin:var(--space-6) auto 0;line-height:1.65;">One actionable insight on training, nutrition, or mindset — delivered every Monday. No spam. Unsubscribe anytime.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--accent);font-family:var(--font-body);padding:var(--space-4) 0;\'>You\'re in. Check your inbox Monday.</p>';">
+            <div class="newsletter-form__row">
+              <input type="email" class="newsletter-form__input" placeholder="Your email address" required autocomplete="email" aria-label="Email for newsletter">
+              <button type="submit" class="btn btn--primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__editorial"><p class="footer__est">EST. 2024 · ONLINE WORLDWIDE</p><h2 class="footer__tagline">TRAIN LIKE<br><em>YOU MEAN IT.</em></h2></div>
+      <div class="footer__grid">
+        <div><p class="footer__col-title">Navigate</p><ul class="footer__col-list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="results.html">Results</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><p class="footer__col-title">Programs</p><ul class="footer__col-list"><li><a href="programs.html">Foundations</a></li><li><a href="programs.html">Performance</a></li><li><a href="programs.html">Elite</a></li><li><a href="programs.html">Nutrition</a></li><li><a href="programs.html">Group Calls</a></li></ul></div>
+        <div><p class="footer__col-title">Support</p><ul class="footer__col-list"><li><a href="pricing.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Refund Policy</a></li></ul></div>
+        <div><p class="footer__col-title">Follow</p><ul class="footer__socials"><li><a href="#" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></li><li><a href="#" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li><li><a href="#" class="footer__social" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li><li><a href="#" class="footer__social" aria-label="Strava" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg></a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>&copy; <span data-year></span> APEX Coaching</span><span>Made for those who show up</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/gsap-init.js" defer></script>
+
+  <script>
+  /* Blog filter tabs */
+  (function(){
+    const tabs = document.querySelectorAll('.filter-tab');
+    const posts = document.querySelectorAll('[data-category]');
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(t){ t.classList.remove('filter-tab--active'); });
+        tab.classList.add('filter-tab--active');
+        const filter = tab.getAttribute('data-filter');
+        posts.forEach(function(post){
+          if(filter === 'all' || post.getAttribute('data-category') === filter){
+            post.style.display = '';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

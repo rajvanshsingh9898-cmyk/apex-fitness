@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — APEX Fitness Coaching</title>
+  <meta name="description" content="Meet the coach behind APEX. 10 years of experience, 500+ transformations, and one mission: build systems that create permanent change.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — APEX Fitness Coaching">
+  <meta property="og:description" content="Meet the coach behind APEX. 10 years, 500+ clients, one mission.">
+  <meta property="og:image" content="./assets/hero-primary.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { display: ['Cormorant Garamond','Georgia','serif'], body: ['DM Sans','Helvetica Neue','sans-serif'] } } }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/about.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══ ANNOUNCE BAR ═══ -->
+  <div class="announce-bar" role="marquee" aria-label="Announcements">
+    <div class="announce-bar__track">
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+    </div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" aria-label="APEX Home">
+        <span class="navbar__logo"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L3 26h6l5-12 5 12h6L14 2z"/></svg></span>
+        <span class="navbar__wordmark">APEX</span>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="programs.html" class="navbar__link">Programs</a></li>
+        <li><a href="results.html" class="navbar__link">Results</a></li>
+        <li><a href="pricing.html" class="navbar__link">Pricing</a></li>
+        <li><a href="blog.html" class="navbar__link">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="navbar__cta">Book a Call</a>
+      <button class="navbar__hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="programs.html" class="mobile-nav__link">Programs</a>
+    <a href="results.html" class="mobile-nav__link">Results</a>
+    <a href="pricing.html" class="mobile-nav__link">Pricing</a>
+    <a href="blog.html" class="mobile-nav__link">Blog</a>
+    <a href="contact.html" class="mobile-nav__link">Contact</a>
+    <div class="mobile-nav__bottom">
+      <a href="contact.html" class="mobile-nav__cta">Book a Call</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ─── HERO ─── -->
+    <section id="hero" class="page-hero" data-nav-theme="dark">
+      <img src="./assets/hero-alternate.png"
+           alt="Low-angle barbell overhead press in black and white"
+           width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async"
+           class="page-hero__image">
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content" data-animate="fade-up">
+        <h1 class="page-hero__title">
+          Not a trainer.<br><em>A performance architect.</em>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ─── COACH STORY ─── -->
+    <section class="coach-story" data-nav-theme="light">
+      <div class="container">
+        <div class="coach-story__grid">
+          <div class="coach-story__image-wrap">
+            <img src="./assets/coach-portrait.png"
+                 alt="APEX head coach editorial portrait"
+                 width="600" height="800" loading="lazy" decoding="async"
+                 class="coach-story__image">
+          </div>
+
+          <div class="coach-story__text" data-animate="stagger">
+            <span class="accent-line"></span>
+            <p class="eyebrow" style="color:var(--grey-mid);margin-top:var(--space-4);">MY STORY</p>
+
+            <p class="coach-story__paragraph">
+              I started training seriously at 19 — not because I wanted to look good, but because I
+              was tired of feeling weak. Weak in my body, weak in my discipline, weak in the way I
+              showed up for the things that mattered. The gym became the one place where the rules
+              were simple: put in the work, get the result.
+            </p>
+
+            <blockquote class="coach-story__pullquote">
+              "I don't believe in motivation. I believe in systems. Motivation fades.
+              Systems are what remain when the excitement wears off."
+            </blockquote>
+
+            <p class="coach-story__paragraph">
+              After earning my NSCA-CSCS certification and spending six years training clients
+              in-person, I made the switch to online coaching in 2020. Not because it was trendy —
+              because I realized the best coaching doesn't require proximity. It requires precision,
+              communication, and an obsessive attention to detail. Online coaching, done right,
+              delivers all three.
+            </p>
+
+            <blockquote class="coach-story__pullquote">
+              "The clients I work with aren't beginners to hard work.
+              They're beginners to having someone who refuses to let them settle."
+            </blockquote>
+
+            <p class="coach-story__paragraph">
+              Over 500 clients later, the APEX method has become something I'm genuinely proud of.
+              Every program is built from the ground up — no templates, no recycled PDF plans.
+              I study your movement, your lifestyle, your obstacles, and your psychology.
+              Then I build something that doesn't just work for 12 weeks. It works for life.
+              That's what separates coaching from content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CREDENTIALS ─── -->
+    <section class="credentials" data-nav-theme="dark">
+      <div class="container">
+        <div class="credentials__grid" data-animate="stagger">
+          <div class="credential-card">
+            <span class="credential-card__number">NSCA-CSCS</span>
+            <p class="credential-card__label">Certified Strength &amp; Conditioning Specialist</p>
+          </div>
+          <div class="credential-card">
+            <span class="credential-card__number">10+</span>
+            <p class="credential-card__label">Years of Coaching Experience</p>
+          </div>
+          <div class="credential-card">
+            <span class="credential-card__number">500+</span>
+            <p class="credential-card__label">Clients Transformed</p>
+          </div>
+          <div class="credential-card">
+            <span class="credential-card__number">98%</span>
+            <p class="credential-card__label">Client Satisfaction Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MANIFESTO ─── -->
+    <section class="manifesto" data-nav-theme="dark">
+      <video class="manifesto__video" autoplay muted loop playsinline preload="none">
+        <source src="./assets/training-atmosphere.mp4" type="video/mp4">
+      </video>
+      <div class="manifesto__content container" data-animate="stagger">
+        <p class="manifesto__statement">
+          I believe the body is built to be challenged — not preserved.
+        </p>
+        <p class="manifesto__statement">
+          I believe consistency beats intensity, and structure beats spontaneity.
+        </p>
+        <p class="manifesto__statement">
+          I believe the best version of you already exists — it just needs a system to emerge.
+        </p>
+        <p class="manifesto__statement">
+          I believe in coaching that makes itself unnecessary.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section style="background:var(--white-off);padding:clamp(80px,10vw,160px) 0;text-align:center;" data-nav-theme="light">
+      <div class="container" data-animate="fade-up">
+        <h2 style="font-family:var(--font-display);font-style:italic;font-size:var(--text-2xl);color:var(--black);font-weight:300;">
+          Ready to work with me?
+        </h2>
+        <a href="contact.html" class="btn btn--primary-dark btn--large" style="margin-top:var(--space-8);">Apply for Coaching</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__editorial">
+        <p class="footer__est">EST. 2024 · ONLINE WORLDWIDE</p>
+        <h2 class="footer__tagline">TRAIN LIKE<br><em>YOU MEAN IT.</em></h2>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <p class="footer__col-title">Navigate</p>
+          <ul class="footer__col-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Programs</p>
+          <ul class="footer__col-list">
+            <li><a href="programs.html">Foundations</a></li>
+            <li><a href="programs.html">Performance</a></li>
+            <li><a href="programs.html">Elite</a></li>
+            <li><a href="programs.html">Nutrition</a></li>
+            <li><a href="programs.html">Group Calls</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Support</p>
+          <ul class="footer__col-list">
+            <li><a href="pricing.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Follow</p>
+          <ul class="footer__socials">
+            <li><a href="#" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></li>
+            <li><a href="#" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+            <li><a href="#" class="footer__social" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+            <li><a href="#" class="footer__social" aria-label="Strava" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-year></span> APEX Coaching</span>
+        <span>Made for those who show up</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/gsap-init.js" defer></script>
+</body>
+</html>

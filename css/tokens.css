@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════════════════════
+   APEX — Design Tokens
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* COLORS — pure black and white with one warm off-white */
+  --black:          #0a0a0a;
+  --black-soft:     #141414;
+  --black-muted:    #1e1e1e;
+  --grey-dark:      #2a2a2a;
+  --grey-mid:       #6b6b6b;
+  --grey-light:     #adadad;
+  --grey-faint:     #d4d4d4;
+  --white-off:      #f5f4f0;
+  --white:          #fafaf9;
+  --white-pure:     #ffffff;
+  --accent:         #c8a96e;
+  --accent-dim:     rgba(200,169,110,0.1);
+
+  /* SEMANTIC */
+  --bg-dark:        var(--black);
+  --bg-light:       var(--white-off);
+  --text-on-dark:   var(--white-off);
+  --text-on-light:  var(--black);
+  --border-dark:    rgba(255,255,255,0.08);
+  --border-light:   rgba(0,0,0,0.1);
+
+  /* TYPOGRAPHY */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
+
+  /* TYPE SCALE */
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+  --text-hero: clamp(3.5rem,   1rem    + 7vw,    9rem);
+
+  /* SPACING */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* RADIUS */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+
+  /* TRANSITIONS */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration:    240ms;
+
+  /* CONTENT WIDTHS */
+  --content-narrow:  640px;
+  --content-default: 960px;
+  --content-wide:    1280px;
+}

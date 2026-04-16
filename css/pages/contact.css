@@ -1,0 +1,125 @@
+/* ═══════════════════════════════════════════════════════
+   APEX — Contact Page Styles
+   ═══════════════════════════════════════════════════════ */
+
+.contact-hero {
+  height: 50vh;
+  min-height: 320px;
+}
+
+.contact-main {
+  background: var(--black);
+  padding: clamp(80px, 10vw, 160px) 0;
+}
+
+.contact-main__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5vw, 80px);
+}
+
+@media (min-width: 768px) {
+  .contact-main__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Form card */
+.contact-form-card {
+  background: var(--black-soft);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.contact-form-card__heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--white-off);
+  margin-bottom: var(--space-6);
+}
+
+/* Success state */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: var(--space-10) 0;
+}
+
+.form-success.show {
+  display: block;
+}
+
+.form-success__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-4);
+}
+
+.form-success__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--white-off);
+}
+
+.form-success__body {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--grey-mid);
+  margin-top: var(--space-3);
+  line-height: 1.6;
+}
+
+/* Info column */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contact-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-info__label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--grey-mid);
+}
+
+.contact-info__value {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--white-off);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-info__socials {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+
+/* Calendly placeholder */
+.calendly-card {
+  background: var(--black-soft);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+}
+
+.calendly-card__heading {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--grey-light);
+  margin-bottom: var(--space-4);
+}

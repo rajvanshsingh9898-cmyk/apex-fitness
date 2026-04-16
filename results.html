@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — APEX Fitness Coaching</title>
+  <meta name="description" content="Real client transformations and testimonials from APEX coaching. See the proof — 500+ clients, 98% satisfaction, measurable results.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Results — APEX Fitness Coaching">
+  <meta property="og:description" content="Real client transformations. 500+ coached. 98% satisfaction.">
+  <meta property="og:image" content="./assets/hero-primary.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','Georgia','serif'],body:['DM Sans','Helvetica Neue','sans-serif']}}}}</script>
+
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/home.css">
+  <link rel="stylesheet" href="./css/pages/results.css">
+  <link rel="stylesheet" href="./css/pages/about.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announce bar -->
+  <div class="announce-bar" role="marquee" aria-label="Announcements">
+    <div class="announce-bar__track">
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" aria-label="APEX Home"><span class="navbar__logo"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L3 26h6l5-12 5 12h6L14 2z"/></svg></span><span class="navbar__wordmark">APEX</span></a>
+      <ul class="navbar__links"><li><a href="about.html" class="navbar__link">About</a></li><li><a href="programs.html" class="navbar__link">Programs</a></li><li><a href="results.html" class="navbar__link">Results</a></li><li><a href="pricing.html" class="navbar__link">Pricing</a></li><li><a href="blog.html" class="navbar__link">Blog</a></li></ul>
+      <a href="contact.html" class="navbar__cta">Book a Call</a>
+      <button class="navbar__hamburger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="about.html" class="mobile-nav__link">About</a><a href="programs.html" class="mobile-nav__link">Programs</a><a href="results.html" class="mobile-nav__link">Results</a><a href="pricing.html" class="mobile-nav__link">Pricing</a><a href="blog.html" class="mobile-nav__link">Blog</a><a href="contact.html" class="mobile-nav__link">Contact</a>
+    <div class="mobile-nav__bottom"><a href="contact.html" class="mobile-nav__cta">Book a Call</a></div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section id="hero" class="page-hero" data-nav-theme="dark">
+      <img src="./assets/transformation-results.png" alt="Client transformation diptych" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async" class="page-hero__image">
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content" data-animate="fade-up">
+        <h1 class="page-hero__title">The proof is in<br><em>the results.</em></h1>
+      </div>
+    </section>
+
+    <!-- Stats band -->
+    <section class="results" data-nav-theme="dark" style="padding-top:clamp(64px,8vw,100px);padding-bottom:clamp(64px,8vw,100px);">
+      <div class="container">
+        <div class="stats-band">
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="500" data-suffix="+">0</span>
+            <p class="stat-cell__label">Clients Coached</p>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="12" data-suffix=" Weeks">0</span>
+            <p class="stat-cell__label">Average Transformation</p>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="98" data-suffix="%">0</span>
+            <p class="stat-cell__label">Client Satisfaction</p>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="4.9" data-suffix="/5">0</span>
+            <p class="stat-cell__label">Average Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Transformations -->
+    <section class="featured-transforms" data-nav-theme="light">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--grey-mid);">FEATURED TRANSFORMATIONS</p>
+        <h2 class="section-heading" style="color:var(--black);margin-top:var(--space-3);">Real people. <em>Real results.</em></h2>
+
+        <div class="featured-transforms__grid" data-animate="stagger">
+          <div class="transform-card">
+            <img src="./assets/transformation-results.png" alt="Rahul M. transformation — before and after" width="600" height="450" loading="lazy" decoding="async" class="transform-card__image">
+            <div class="transform-card__body">
+              <span class="transform-card__badge">ELITE Program</span>
+              <p class="transform-card__quote">"I've worked with 4 coaches over 8 years. Nothing compared to what APEX helped me achieve in 3 months."</p>
+              <div class="transform-card__stats">
+                <div><span class="transform-card__stat-value">-18kg</span><span class="transform-card__stat-label">Fat Lost</span></div>
+                <div><span class="transform-card__stat-value">+8kg</span><span class="transform-card__stat-label">Muscle Gained</span></div>
+              </div>
+              <p class="transform-card__name">Rahul M.</p>
+              <p class="transform-card__meta">24 weeks · ELITE Program</p>
+            </div>
+          </div>
+
+          <div class="transform-card">
+            <img src="./assets/program-card-bg.png" alt="Priya S. — performance transformation" width="600" height="450" loading="lazy" decoding="async" class="transform-card__image">
+            <div class="transform-card__body">
+              <span class="transform-card__badge">PERFORMANCE</span>
+              <p class="transform-card__quote">"Lost 12kg in 10 weeks without losing strength. The programming is genuinely intelligent."</p>
+              <div class="transform-card__stats">
+                <div><span class="transform-card__stat-value">-12kg</span><span class="transform-card__stat-label">Fat Lost</span></div>
+                <div><span class="transform-card__stat-value">+40kg</span><span class="transform-card__stat-label">Squat PR</span></div>
+              </div>
+              <p class="transform-card__name">Priya S.</p>
+              <p class="transform-card__meta">16 weeks · PERFORMANCE Program</p>
+            </div>
+          </div>
+
+          <div class="transform-card">
+            <img src="./assets/footer-cta.png" alt="Meera V. — foundations transformation" width="600" height="450" loading="lazy" decoding="async" class="transform-card__image">
+            <div class="transform-card__body">
+              <span class="transform-card__badge">FOUNDATIONS</span>
+              <p class="transform-card__quote">"APEX is not for people who want easy. It's for people who want results. Best shape of my life at 38."</p>
+              <div class="transform-card__stats">
+                <div><span class="transform-card__stat-value">-9kg</span><span class="transform-card__stat-label">Fat Lost</span></div>
+                <div><span class="transform-card__stat-value">4x</span><span class="transform-card__stat-label">Weekly Training</span></div>
+              </div>
+              <p class="transform-card__name">Meera V.</p>
+              <p class="transform-card__meta">12 weeks · FOUNDATIONS Program</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial grid (6 cards) -->
+    <section class="results-testimonials" data-nav-theme="light">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--grey-mid);">TESTIMONIALS</p>
+        <h2 class="section-heading" style="color:var(--black);margin-top:var(--space-3);">What clients say.</h2>
+
+        <div class="results-testimonials__grid" data-animate="stagger">
+          <div class="results-testimonial-card">
+            <div class="results-testimonial-card__stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+            <p class="results-testimonial-card__quote">Lost 12kg in 10 weeks without losing strength. The programming is genuinely intelligent.</p>
+            <div class="results-testimonial-card__divider"></div>
+            <p class="results-testimonial-card__name">Priya S.</p>
+            <p class="results-testimonial-card__meta">PERFORMANCE Program</p>
+          </div>
+
+          <div class="results-testimonial-card">
+            <div class="results-testimonial-card__stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+            <p class="results-testimonial-card__quote">The nutrition coaching alone was worth triple what I paid. I finally understand how to eat for my goals.</p>
+            <div class="results-testimonial-card__divider"></div>
+            <p class="results-testimonial-card__name">Arjun K.</p>
+            <p class="results-testimonial-card__meta">ELITE Program</p>
+          </div>
+
+          <div class="results-testimonial-card">
+            <div class="results-testimonial-card__stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+            <p class="results-testimonial-card__quote">APEX is not for people who want easy. It's for people who want results. Best shape of my life at 38.</p>
+            <div class="results-testimonial-card__divider"></div>
+            <p class="results-testimonial-card__name">Meera V.</p>
+            <p class="results-testimonial-card__meta">FOUNDATIONS Program</p>
+          </div>
+
+          <div class="results-testimonial-card">
+            <div class="results-testimonial-card__stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+            <p class="results-testimonial-card__quote">I've tried every fitness app out there. Having a real coach who actually cares about your form and progress changes everything. Down 15kg and deadlifting 140kg.</p>
+            <div class="results-testimonial-card__divider"></div>
+            <p class="results-testimonial-card__name">Vikram D.</p>
+            <p class="results-testimonial-card__meta">ELITE Program · 24 weeks</p>
+          </div>
+
+          <div class="results-testimonial-card">
+            <div class="results-testimonial-card__stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+            <p class="results-testimonial-card__quote">As a working mother of two, I didn't think I had time for serious training. APEX proved me wrong. The flexibility of online coaching is unmatched.</p>
+            <div class="results-testimonial-card__divider"></div>
+            <p class="results-testimonial-card__name">Anita R.</p>
+            <p class="results-testimonial-card__meta">FOUNDATIONS Program · 12 weeks</p>
+          </div>
+
+          <div class="results-testimonial-card">
+            <div class="results-testimonial-card__stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+            <p class="results-testimonial-card__quote">The weekly check-ins are worth every rupee. There's no hiding from progress when someone is watching and genuinely invested in your outcome.</p>
+            <div class="results-testimonial-card__divider"></div>
+            <p class="results-testimonial-card__name">Sahil M.</p>
+            <p class="results-testimonial-card__meta">PERFORMANCE Program · 16 weeks</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video testimonials placeholder -->
+    <section class="video-testimonials" data-nav-theme="dark">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--accent);">VIDEO TESTIMONIALS</p>
+        <h2 class="section-heading" style="color:var(--white-off);margin-top:var(--space-3);">Hear it from them.</h2>
+
+        <div class="video-testimonials__grid" data-animate="stagger">
+          <div class="video-card">
+            <div class="video-card__thumb">
+              <div class="video-card__play" aria-label="Play video">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l12 6-12 6V4z" fill="#fafaf9"/></svg>
+              </div>
+            </div>
+            <div class="video-card__body">
+              <p class="video-card__quote">"The structure changed how I think about training entirely. I no longer wing it — every session has a purpose."</p>
+              <p class="video-card__name">Rahul M. — ELITE Program</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-card__thumb">
+              <div class="video-card__play" aria-label="Play video">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l12 6-12 6V4z" fill="#fafaf9"/></svg>
+              </div>
+            </div>
+            <div class="video-card__body">
+              <p class="video-card__quote">"I was skeptical about online coaching. After 16 weeks, I'm a complete convert. Better results than any in-person trainer I've had."</p>
+              <p class="video-card__name">Priya S. — PERFORMANCE Program</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-card__thumb">
+              <div class="video-card__play" aria-label="Play video">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l12 6-12 6V4z" fill="#fafaf9"/></svg>
+              </div>
+            </div>
+            <div class="video-card__body">
+              <p class="video-card__quote">"The accountability alone made the difference. Knowing someone is checking in on your progress makes you show up differently."</p>
+              <p class="video-card__name">Arjun K. — ELITE Program</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--white-off);padding:clamp(80px,10vw,160px) 0;text-align:center;" data-nav-theme="light">
+      <div class="container" data-animate="fade-up">
+        <h2 style="font-family:var(--font-display);font-style:italic;font-size:var(--text-2xl);color:var(--black);font-weight:300;">Ready to write your own results story?</h2>
+        <a href="contact.html" class="btn btn--primary-dark btn--large" style="margin-top:var(--space-8);">Apply for Coaching</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__editorial"><p class="footer__est">EST. 2024 · ONLINE WORLDWIDE</p><h2 class="footer__tagline">TRAIN LIKE<br><em>YOU MEAN IT.</em></h2></div>
+      <div class="footer__grid">
+        <div><p class="footer__col-title">Navigate</p><ul class="footer__col-list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="results.html">Results</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><p class="footer__col-title">Programs</p><ul class="footer__col-list"><li><a href="programs.html">Foundations</a></li><li><a href="programs.html">Performance</a></li><li><a href="programs.html">Elite</a></li><li><a href="programs.html">Nutrition</a></li><li><a href="programs.html">Group Calls</a></li></ul></div>
+        <div><p class="footer__col-title">Support</p><ul class="footer__col-list"><li><a href="pricing.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Refund Policy</a></li></ul></div>
+        <div><p class="footer__col-title">Follow</p><ul class="footer__socials"><li><a href="#" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></li><li><a href="#" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li><li><a href="#" class="footer__social" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li><li><a href="#" class="footer__social" aria-label="Strava" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg></a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>&copy; <span data-year></span> APEX Coaching</span><span>Made for those who show up</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/gsap-init.js" defer></script>
+  <script src="./js/counter.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* ═══════════════════════════════════════════════════════
+   APEX — Pricing Page Styles
+   ═══════════════════════════════════════════════════════ */
+
+.pricing-full {
+  background: var(--white-off);
+  padding: clamp(80px, 10vw, 160px) 0;
+}
+
+.pricing-full__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: var(--space-10);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .pricing-full__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── ADD-ONS ─── */
+.addons {
+  background: var(--white-off);
+  padding: 0 0 clamp(80px, 10vw, 160px);
+}
+
+.addons__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .addons__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .addons__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.addon-card {
+  background: var(--white-pure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.addon-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--black);
+  font-weight: 500;
+}
+
+.addon-card__price {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-top: var(--space-2);
+}
+
+.addon-card__desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--grey-mid);
+  line-height: 1.6;
+  margin-top: var(--space-3);
+}
+
+/* ─── GUARANTEE ─── */
+.guarantee {
+  background: var(--black);
+  padding: clamp(80px, 10vw, 160px) 0;
+}
+
+.guarantee__card {
+  background: var(--black-soft);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: clamp(40px, 5vw, 64px);
+  text-align: center;
+  max-width: var(--content-default);
+  margin: 0 auto;
+}
+
+.guarantee__heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-2xl);
+  color: var(--white-off);
+}
+
+.guarantee__body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--grey-mid);
+  max-width: 44ch;
+  margin: var(--space-4) auto 0;
+  line-height: 1.7;
+}
+
+/* ─── PRICING FAQ ─── */
+.pricing-faq {
+  background: var(--white-off);
+  padding: clamp(80px, 10vw, 160px) 0;
+}
+
+/* ─── FULL COMPARISON ─── */
+.full-comparison {
+  background: var(--white-off);
+  padding: 0 0 clamp(80px, 10vw, 160px);
+}
+
+.full-comparison__table-wrap {
+  overflow-x: auto;
+  margin-top: var(--space-10);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--white-pure);
+}
+
+.full-comparison__table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+.full-comparison__table thead th {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  padding: 20px 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--white-off);
+}
+
+.full-comparison__table thead th:first-child {
+  color: var(--grey-mid);
+}
+
+.full-comparison__table tbody td {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--black);
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.full-comparison__table tbody td:first-child {
+  color: var(--grey-mid);
+  font-size: 13px;
+}
+
+.full-comparison__table tbody tr:last-child td {
+  border-bottom: none;
+}

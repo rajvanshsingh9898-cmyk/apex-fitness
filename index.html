@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX — Online Fitness Coaching for High-Performers</title>
+  <meta name="description" content="Premium 1-on-1 online fitness coaching. Personalized programs, weekly check-ins, and results in 12 weeks. Limited spots available.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="APEX — Online Fitness Coaching for High-Performers">
+  <meta property="og:description" content="Premium 1-on-1 online fitness coaching. Personalized programs, weekly check-ins, and results in 12 weeks.">
+  <meta property="og:image" content="./assets/hero-primary.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APEX — Online Fitness Coaching for High-Performers">
+  <meta name="twitter:description" content="Premium 1-on-1 online fitness coaching. Personalized programs, weekly check-ins, and results in 12 weeks.">
+  <meta name="twitter:image" content="./assets/hero-primary.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload hero assets -->
+  <link rel="preload" href="./assets/hero-loop.mp4" as="video" type="video/mp4">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cormorant Garamond', 'Georgia', 'serif'],
+            body: ['DM Sans', 'Helvetica Neue', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/home.css">
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══ PRELOADER ═══ -->
+  <div class="preloader" aria-hidden="true">
+    <svg class="preloader__logo" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M28 4L6 52h12l10-24 10 24h12L28 4z" fill="#fafaf9"/>
+    </svg>
+    <div class="preloader__bar-track">
+      <div class="preloader__bar-fill"></div>
+    </div>
+    <p class="preloader__text">Loading</p>
+  </div>
+
+  <!-- ═══ ANNOUNCE BAR ═══ -->
+  <div class="announce-bar" role="marquee" aria-label="Announcements">
+    <div class="announce-bar__track">
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>LIMITED SPOTS — 3 CLIENTS REMAINING THIS MONTH</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>FREE STRATEGY CALL — NO COMMITMENT</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>100% ONLINE · WORLDWIDE</span>
+      <span class="announce-bar__item"><span class="announce-bar__dot"></span>RESULTS IN 12 WEEKS OR YOUR MONEY BACK</span>
+    </div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" aria-label="APEX Home">
+        <span class="navbar__logo">
+          <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L3 26h6l5-12 5 12h6L14 2z"/></svg>
+        </span>
+        <span class="navbar__wordmark">APEX</span>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="programs.html" class="navbar__link">Programs</a></li>
+        <li><a href="results.html" class="navbar__link">Results</a></li>
+        <li><a href="pricing.html" class="navbar__link">Pricing</a></li>
+        <li><a href="blog.html" class="navbar__link">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="navbar__cta">Book a Call</a>
+      <button class="navbar__hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE NAV ═══ -->
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="programs.html" class="mobile-nav__link">Programs</a>
+    <a href="results.html" class="mobile-nav__link">Results</a>
+    <a href="pricing.html" class="mobile-nav__link">Pricing</a>
+    <a href="blog.html" class="mobile-nav__link">Blog</a>
+    <a href="contact.html" class="mobile-nav__link">Contact</a>
+    <div class="mobile-nav__bottom">
+      <a href="contact.html" class="mobile-nav__cta">Book a Call</a>
+      <div class="mobile-nav__socials">
+        <a href="#" class="mobile-nav__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#" class="mobile-nav__social" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" class="mobile-nav__social" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main id="main-content">
+
+    <!-- ─── SECTION 1: HERO ─── -->
+    <section id="hero" class="hero" data-nav-theme="dark">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto">
+        <source src="./assets/hero-loop.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <div class="hero__label hero-sub">
+          <span class="hero__label-line"></span>
+          <span class="hero__label-text">Online Fitness Coaching</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero-line">TRAIN LIKE</span><br>
+          <em class="hero-line">YOU MEAN IT.</em>
+        </h1>
+
+        <p class="hero__sub hero-sub">
+          Premium 1-on-1 coaching for people who are serious about results.
+          Limited to 8 clients per month.
+        </p>
+
+        <div class="hero__cta-row hero-cta">
+          <a href="contact.html" class="btn btn--primary">Apply Now</a>
+          <a href="programs.html" class="text-link">See Programs &rarr;</a>
+        </div>
+
+        <div class="hero__availability hero-availability">
+          <span class="availability-dot"></span>
+          <span class="hero__availability-text">3 spots remaining this month</span>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 2: MANIFESTO TICKER ─── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__item">THE BODY IS CAPABLE OF FAR MORE <span class="ticker__dot"></span></span>
+        <span class="ticker__item">THE MIND GIVES UP FIRST <span class="ticker__dot"></span></span>
+        <span class="ticker__item">RESULTS REQUIRE REPETITION <span class="ticker__dot"></span></span>
+        <span class="ticker__item">SHOW UP EVEN WHEN YOU DON'T WANT TO <span class="ticker__dot"></span></span>
+        <span class="ticker__item">NO SHORTCUTS. NO EXCUSES. <span class="ticker__dot"></span></span>
+        <span class="ticker__item">THE BODY IS CAPABLE OF FAR MORE <span class="ticker__dot"></span></span>
+        <span class="ticker__item">THE MIND GIVES UP FIRST <span class="ticker__dot"></span></span>
+        <span class="ticker__item">RESULTS REQUIRE REPETITION <span class="ticker__dot"></span></span>
+        <span class="ticker__item">SHOW UP EVEN WHEN YOU DON'T WANT TO <span class="ticker__dot"></span></span>
+        <span class="ticker__item">NO SHORTCUTS. NO EXCUSES. <span class="ticker__dot"></span></span>
+        <span class="ticker__item">THE BODY IS CAPABLE OF FAR MORE <span class="ticker__dot"></span></span>
+        <span class="ticker__item">THE MIND GIVES UP FIRST <span class="ticker__dot"></span></span>
+        <span class="ticker__item">RESULTS REQUIRE REPETITION <span class="ticker__dot"></span></span>
+        <span class="ticker__item">SHOW UP EVEN WHEN YOU DON'T WANT TO <span class="ticker__dot"></span></span>
+        <span class="ticker__item">NO SHORTCUTS. NO EXCUSES. <span class="ticker__dot"></span></span>
+      </div>
+    </div>
+
+    <!-- ─── SECTION 3: SOCIAL PROOF ─── -->
+    <section class="social-proof" data-nav-theme="light">
+      <p class="social-proof__label">Featured In &amp; Trusted By</p>
+      <div style="overflow:hidden;">
+        <div class="social-proof__track">
+          <span class="social-proof__brand">MEN'S HEALTH</span>
+          <span class="social-proof__brand">COACH MAG</span>
+          <span class="social-proof__brand">GYMSHARK</span>
+          <span class="social-proof__brand">MYFITNESSPAL</span>
+          <span class="social-proof__brand">STRAVA</span>
+          <span class="social-proof__brand">WHOOP</span>
+          <span class="social-proof__brand">MEN'S HEALTH</span>
+          <span class="social-proof__brand">COACH MAG</span>
+          <span class="social-proof__brand">GYMSHARK</span>
+          <span class="social-proof__brand">MYFITNESSPAL</span>
+          <span class="social-proof__brand">STRAVA</span>
+          <span class="social-proof__brand">WHOOP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 4: ABOUT TEASER ─── -->
+    <section id="about-teaser" class="about-teaser" data-nav-theme="light">
+      <div class="container">
+        <div class="about-teaser__grid">
+          <div class="about-teaser__image-wrap" id="about-img">
+            <img src="./assets/coach-portrait.png"
+                 alt="APEX head coach in editorial portrait — side-lit studio"
+                 width="600" height="600" loading="lazy" decoding="async"
+                 class="about-teaser__image">
+            <div class="about-teaser__stat">
+              <span class="about-teaser__stat-num">500+</span>
+              <span class="about-teaser__stat-label">clients transformed</span>
+            </div>
+          </div>
+
+          <div class="about-teaser__text" id="about-text">
+            <span class="accent-line"></span>
+            <p class="eyebrow" style="color:var(--grey-mid);margin-top:var(--space-4);">THE COACH</p>
+            <h2 class="about-teaser__heading">
+              Not a personal trainer.<br>
+              <em>A performance architect.</em>
+            </h2>
+            <p class="about-teaser__body">
+              I don't sell 30-day challenges or generic PDF plans. I build
+              personalized systems that create permanent change — physically,
+              mentally, and structurally.
+            </p>
+            <div class="about-teaser__pills">
+              <span class="about-teaser__pill">10 Years Experience</span>
+              <span class="about-teaser__pill">NSCA Certified</span>
+              <span class="about-teaser__pill">500+ Clients</span>
+            </div>
+            <a href="about.html" class="text-link text-link--dark" style="margin-top:var(--space-8);">Read my story &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 5: PROGRAMS PREVIEW ─── -->
+    <section id="programs-preview" class="programs-preview" data-nav-theme="dark">
+      <div class="container">
+        <div class="programs-preview__head">
+          <p class="eyebrow" style="color:var(--accent);">COACHING PROGRAMS</p>
+          <h2 class="section-heading" style="color:var(--white-off);margin-top:var(--space-3);">
+            Choose your<br><em>level of commitment.</em>
+          </h2>
+          <p class="body-text" style="max-width:48ch;margin-top:var(--space-4);">
+            Every program is fully personalized. No templates. No shortcuts.
+          </p>
+        </div>
+
+        <div class="programs-preview__grid">
+          <!-- Card 01 -->
+          <div class="program-card">
+            <span class="program-card__number">01</span>
+            <p class="program-card__category">FOUNDATIONS</p>
+            <h3 class="program-card__title">12-Week Body Recomposition</h3>
+            <p class="program-card__desc">For beginners serious about building a sustainable foundation.</p>
+            <div class="program-card__divider"></div>
+            <p class="program-card__meta">12 weeks · from &#8377;18,000</p>
+            <a href="programs.html" class="program-card__link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="program-card">
+            <span class="program-card__number">02</span>
+            <p class="program-card__category">PERFORMANCE</p>
+            <h3 class="program-card__title">16-Week Strength &amp; Conditioning</h3>
+            <p class="program-card__desc">For intermediates ready to unlock their athletic potential.</p>
+            <div class="program-card__divider"></div>
+            <p class="program-card__meta">16 weeks · from &#8377;28,000</p>
+            <a href="programs.html" class="program-card__link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="program-card">
+            <span class="program-card__number">03</span>
+            <p class="program-card__category">ELITE</p>
+            <h3 class="program-card__title">6-Month Total Transformation</h3>
+            <p class="program-card__desc">For those who want the most intensive, uncompromising coaching experience.</p>
+            <div class="program-card__divider"></div>
+            <p class="program-card__meta">24 weeks · from &#8377;48,000</p>
+            <a href="programs.html" class="program-card__link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="program-card">
+            <span class="program-card__number">04</span>
+            <p class="program-card__category">NUTRITION</p>
+            <h3 class="program-card__title">Precision Nutrition Coaching</h3>
+            <p class="program-card__desc">Standalone or add-on. Periodized nutrition built around your life.</p>
+            <div class="program-card__divider"></div>
+            <p class="program-card__meta">Ongoing · from &#8377;8,000/mo</p>
+            <a href="programs.html" class="program-card__link">Learn more &rarr;</a>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:var(--space-10);">
+          <a href="programs.html" class="btn btn--outline">View all programs &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 6: PHILOSOPHY / METHOD ─── -->
+    <section id="philosophy" class="philosophy" data-nav-theme="light">
+      <img src="./assets/training-method.png" role="presentation" alt="" class="philosophy__bg" loading="lazy" decoding="async" width="520" height="520">
+
+      <div class="philosophy__content container">
+        <p class="eyebrow" style="color:var(--grey-mid);">THE APEX METHOD</p>
+        <h2 class="philosophy__heading" style="margin-top:var(--space-3);">
+          Three pillars.<br><em>One unbreakable system.</em>
+        </h2>
+
+        <div class="philosophy__pillars">
+          <div class="pillar">
+            <span class="pillar__number">01</span>
+            <div class="pillar__line"></div>
+            <h3 class="pillar__title">TRAINING</h3>
+            <p class="pillar__body">
+              Periodized programming built around your schedule,
+              equipment, and goals. Every session has a purpose.
+            </p>
+          </div>
+          <div class="pillar">
+            <span class="pillar__number">02</span>
+            <div class="pillar__line"></div>
+            <h3 class="pillar__title">NUTRITION</h3>
+            <p class="pillar__body">
+              Not a diet. A sustainable fueling strategy that
+              works with your lifestyle — not against it.
+            </p>
+          </div>
+          <div class="pillar">
+            <span class="pillar__number">03</span>
+            <div class="pillar__line"></div>
+            <h3 class="pillar__title">ACCOUNTABILITY</h3>
+            <p class="pillar__body">
+              Weekly check-ins, form reviews, and direct
+              coach access. You're never training alone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 7: RESULTS / TRANSFORMATION ─── -->
+    <section id="results" class="results" data-nav-theme="dark">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--accent);">CLIENT RESULTS</p>
+        <h2 class="section-heading" style="color:var(--white-off);margin-top:var(--space-3);">
+          The numbers<br><em>don't lie.</em>
+        </h2>
+
+        <!-- Stats band -->
+        <div class="stats-band">
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="500" data-suffix="+">0</span>
+            <p class="stat-cell__label">Clients Coached</p>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="12" data-suffix=" Weeks">0</span>
+            <p class="stat-cell__label">Average Transformation</p>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="98" data-suffix="%">0</span>
+            <p class="stat-cell__label">Client Satisfaction</p>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__number" data-counter data-target="4.9" data-suffix="/5">0</span>
+            <p class="stat-cell__label">Average Rating</p>
+          </div>
+        </div>
+
+        <!-- Featured transformation -->
+        <div class="transformation">
+          <img id="transformation-img" src="./assets/transformation-results.png"
+               alt="Client posture transformation diptych — before and after"
+               width="700" height="480" loading="lazy" decoding="async"
+               class="transformation__image">
+
+          <div class="transformation__quote" id="transformation-quote">
+            <span class="transformation__open-quote">&ldquo;</span>
+            <p class="transformation__text">
+              &ldquo;I've worked with 4 coaches over 8 years. Nothing compared to
+              what APEX helped me achieve in 3 months.&rdquo;
+            </p>
+            <p class="transformation__attribution">
+              — Rahul M., ELITE Program · Lost 18kg, gained 8kg muscle
+            </p>
+            <div class="transformation__stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div id="testimonials" class="testimonials__grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+            </div>
+            <p class="testimonial-card__quote">
+              Lost 12kg in 10 weeks without losing strength. The programming
+              is genuinely intelligent.
+            </p>
+            <div class="testimonial-card__divider"></div>
+            <p class="testimonial-card__name">Priya S.</p>
+            <p class="testimonial-card__meta">PERFORMANCE Program</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+            </div>
+            <p class="testimonial-card__quote">
+              The nutrition coaching alone was worth triple what I paid.
+              I finally understand how to eat for my goals.
+            </p>
+            <div class="testimonial-card__divider"></div>
+            <p class="testimonial-card__name">Arjun K.</p>
+            <p class="testimonial-card__meta">ELITE Program</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+            </div>
+            <p class="testimonial-card__quote">
+              APEX is not for people who want easy. It's for people who
+              want results. I'm now in the best shape of my life at 38.
+            </p>
+            <div class="testimonial-card__divider"></div>
+            <p class="testimonial-card__name">Meera V.</p>
+            <p class="testimonial-card__meta">FOUNDATIONS Program</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 8: PRICING PREVIEW ─── -->
+    <section id="pricing-preview" class="pricing-preview" data-nav-theme="light">
+      <div class="container">
+        <div class="pricing-preview__head">
+          <p class="eyebrow" style="color:var(--grey-mid);">INVESTMENT</p>
+          <h2 class="section-heading" style="color:var(--black);margin-top:var(--space-3);">
+            Transparent pricing.<br><em>Zero surprises.</em>
+          </h2>
+        </div>
+
+        <div class="pricing-preview__grid">
+          <!-- Foundations -->
+          <div class="pricing-card">
+            <p class="pricing-card__tier">FOUNDATIONS</p>
+            <p class="pricing-card__price">&#8377;18,000</p>
+            <p class="pricing-card__duration">12-week program</p>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Personalized training program
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Bi-weekly check-ins
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Basic nutrition guidelines
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Form review via video
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                App access for tracking
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Email support (48hr response)
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn--outline-light btn--full">Apply Now &rarr;</a>
+          </div>
+
+          <!-- Performance (featured) -->
+          <div class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">MOST POPULAR</span>
+            <p class="pricing-card__tier">PERFORMANCE</p>
+            <p class="pricing-card__price">&#8377;28,000</p>
+            <p class="pricing-card__duration">16-week program</p>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Everything in Foundations
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Weekly 1-on-1 check-ins
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Full macro-based nutrition plan
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Priority form review
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Program adjustments every 4 weeks
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Direct WhatsApp support (24hr)
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Supplement guidance
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Monthly group coaching call
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--full">Apply Now &rarr;</a>
+          </div>
+
+          <!-- Elite -->
+          <div class="pricing-card">
+            <p class="pricing-card__tier">ELITE</p>
+            <p class="pricing-card__price">&#8377;48,000</p>
+            <p class="pricing-card__duration">24-week total transformation</p>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Everything in Performance
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Twice-weekly check-ins
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Periodized nutrition cycling
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Blood work analysis
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Supplement protocol
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                24/7 priority WhatsApp
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Recovery &amp; sleep optimization
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Mindset coaching sessions
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Lifetime access to resources
+              </li>
+              <li class="pricing-card__feature">
+                <svg class="pricing-card__check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                4-week money-back guarantee
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn--outline-light btn--full">Apply Now &rarr;</a>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:var(--space-8);">
+          <a href="pricing.html" class="text-link text-link--dark">Full pricing details &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 9: HOW IT WORKS ─── -->
+    <section id="process" class="process" data-nav-theme="dark">
+      <div class="container">
+        <h2 class="process__heading">Simple. Structured. Effective.</h2>
+
+        <div class="process__steps">
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <div class="process-step__circle">1</div>
+            <h3 class="process-step__title">Apply</h3>
+            <p class="process-step__desc">Fill out a short form. Tell us your goals and current situation.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step__circle">2</div>
+            <h3 class="process-step__title">Strategy Call</h3>
+            <p class="process-step__desc">Free 30-min call. We assess fit and build your plan outline.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step__circle">3</div>
+            <h3 class="process-step__title">Onboard</h3>
+            <p class="process-step__desc">Receive your custom program, nutrition guide, and dashboard access.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step__circle">4</div>
+            <h3 class="process-step__title">Transform</h3>
+            <p class="process-step__desc">Weekly check-ins, adjustments, and full coach support throughout.</p>
+          </div>
+        </div>
+
+        <div class="process__cta">
+          <p class="process__cta-heading">Ready to start?</p>
+          <a href="contact.html" class="btn btn--primary btn--large" style="margin-top:var(--space-6);">Book Your Free Strategy Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 10: FINAL CTA ─── -->
+    <section id="final-cta" class="final-cta" data-nav-theme="dark">
+      <video class="final-cta__video" autoplay muted loop playsinline preload="none">
+        <source src="./assets/final-cta.mp4" type="video/mp4">
+      </video>
+      <div class="final-cta__overlay"></div>
+
+      <div class="final-cta__content">
+        <h2 class="final-cta__heading">
+          Your best body is<br><span>14 weeks away.</span>
+        </h2>
+        <p class="final-cta__body">
+          3 spots left this month. Once they're gone, the waitlist opens.
+          Don't wait until you're "ready." You won't be.
+        </p>
+        <a href="contact.html" class="btn btn--primary btn--large" style="margin-top:var(--space-8);">Apply for Coaching</a>
+        <div class="final-cta__trust">
+          <span class="final-cta__trust-item">
+            <svg class="final-cta__trust-check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            No long contracts
+          </span>
+          <span class="final-cta__trust-item">
+            <svg class="final-cta__trust-check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cancel anytime
+          </span>
+          <span class="final-cta__trust-item">
+            <svg class="final-cta__trust-check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Full refund if no results in 4 weeks
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__editorial">
+        <p class="footer__est">EST. 2024 · ONLINE WORLDWIDE</p>
+        <h2 class="footer__tagline">
+          TRAIN LIKE<br><em>YOU MEAN IT.</em>
+        </h2>
+      </div>
+
+      <div class="footer__grid">
+        <div>
+          <p class="footer__col-title">Navigate</p>
+          <ul class="footer__col-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Programs</p>
+          <ul class="footer__col-list">
+            <li><a href="programs.html">Foundations</a></li>
+            <li><a href="programs.html">Performance</a></li>
+            <li><a href="programs.html">Elite</a></li>
+            <li><a href="programs.html">Nutrition</a></li>
+            <li><a href="programs.html">Group Calls</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Support</p>
+          <ul class="footer__col-list">
+            <li><a href="pricing.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Follow</p>
+          <ul class="footer__socials">
+            <li><a href="#" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a></li>
+            <li><a href="#" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a></li>
+            <li><a href="#" class="footer__social" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a></li>
+            <li><a href="#" class="footer__social" aria-label="Strava" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year></span> APEX Coaching</span>
+        <span>Made for those who show up</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- App JS -->
+  <script src="./js/main.js" defer></script>
+  <script src="./js/gsap-init.js" defer></script>
+  <script src="./js/counter.js" defer></script>
+</body>
+</html>
